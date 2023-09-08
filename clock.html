@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clock.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="clock">
+            <div class="needle hour" id="hour"></div>
+            <div class="needle minutes" id="minute"></div>
+        </div>
+    </div>
+<script>
+
+let hour=document.querySelector('#hour')
+let minute=document.querySelector('#minute')
+
+date=new Date();
+hr=date.getHours()
+min=date.getMinutes()
+
+// 1 min = 6 deg
+
+min_rotation = 6 * min
+hr_rotation= 5 * 6 * hr
+minute.style.transform = `rotate(${min_rotation}deg)`;
+hour.style.transform = `rotate(${hr_rotation}deg)`;
+
+
+</script>
+</body>
+</html>
