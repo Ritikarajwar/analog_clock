@@ -25,7 +25,7 @@ min=date.getMinutes()
 // 1 min = 6 deg
 
 min_rotation = 6 * min
-hr_rotation= 5 * 6 * hr
+hr_rotation= 5 * 6 * hr +min/2
 minute.style.transform = `rotate(${min_rotation}deg)`;
 hour.style.transform = `rotate(${hr_rotation}deg)`;
 
